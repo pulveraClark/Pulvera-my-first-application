@@ -1,5 +1,9 @@
 <x-layout>
-    <x-slot name="heading">
+    <x-slot:heading>
         Home Page
-    </x-slot>
+    </x-slot:heading>
+
+    <p class="mt-4 text-gray-700">
+        Welcome to the Home Page! This is where you introduce your site.
+    </p>
 </x-layout>

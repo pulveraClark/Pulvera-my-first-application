@@ -1,5 +1,9 @@
 <x-layout>
-    <x-slot name="heading">
+    <x-slot:heading>
         Contact Page
-    </x-slot>
+    </x-slot:heading>
+
+    <p class="mt-4 text-gray-700">
+        Reach out to us through the details provided here.
+    </p>
 </x-layout>
