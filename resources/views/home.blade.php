@@ -1,9 +1,13 @@
 <x-layout>
-    <x-slot:heading>
-        Home Page
-    </x-slot:heading>
+    <x-slot:heading>Welcome</x-slot:heading>
 
-    <p class="mt-4 text-gray-700">
-        Welcome to the Home Page! This is where you introduce your site.
-    </p>
+    <div class="space-y-4 text-gray-700">
+        <p class="text-lg">
+            This is a minimalist job board built with Laravel & Tailwind CSS.
+        </p>
+        <a href="/jobs"
+           class="inline-block px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700 transition">
+           Browse Jobs
+        </a>
+    </div>
 </x-layout>
