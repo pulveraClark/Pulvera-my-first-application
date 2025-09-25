@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $heading ?? 'My Site' }}</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
 
-    <!-- Navigation -->
+  
     <nav class="bg-white shadow-sm">
         <div class="mx-auto max-w-6xl px-4 flex justify-between items-center h-14">
             <a href="/" class="text-lg font-semibold tracking-tight text-gray-900">
@@ -21,7 +22,7 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
+
     <header class="bg-gray-50 border-b">
         <div class="mx-auto max-w-6xl px-4 py-6">
             <h1 class="text-2xl font-bold text-gray-900">
@@ -30,7 +31,7 @@
         </div>
     </header>
 
-    <!-- Main Content -->
+  
     <main class="mx-auto max-w-6xl px-4 py-8">
         {{ $slot }}
     </main>

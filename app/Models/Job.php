@@ -8,23 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class Job extends Model
 {
     use HasFactory;
-    
+
     protected $table = 'job_listings';
 
-    // One-to-Many: Job belongs to an Employer
+   protected $fillable = ['title', 'salary', 'employer_id'];
+
+
+
     public function employer()
     {
         return $this->belongsTo(\App\Models\Employer::class);
     }
 
-    // Many-to-Many: Job has many Tags (via pivot job_listing_tag)
     public function tags()
     {
-        return $this->belongsToMany(
-            \App\Models\Tag::class,
-            'job_listing_tag',
-            'job_listing_id',
-            'tag_id'
-        );
+        return $this->belongsToMany(\App\Models\Tag::class, 'job_listing_tag', 'job_listing_id', 'tag_id');
     }
 }
+
