@@ -7,16 +7,17 @@ Route::get('/', function () {
     return view('home');
 });
 
-// All jobs
+
 Route::get('/jobs', function () {
     return view('jobs', [
-        'jobs' => Job::all()
+     
+        'jobs' => Job::with('employer', 'tags')->paginate(5)
     ]);
 });
 
-// Single job by ID
+
 Route::get('/jobs/{id}', function ($id) {
     return view('job', [
-        'job' => Job::find($id)
+        'job' => Job::with('employer', 'tags')->findOrFail($id)
     ]);
 });

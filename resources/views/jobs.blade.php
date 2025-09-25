@@ -24,5 +24,10 @@
                 </div>
             </li>
         @endforeach
+
+        <div class="mt-6">
+          {{ $jobs->links() }}
+        </div>
+
     </ul>
 </x-layout>
